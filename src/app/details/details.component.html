@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 600px">
+                <div class="card-header">
+                    <h5>{{empObj.name}}</h5>
+
+                </div>
+                <div class="card-body bg-info">
+                    <h6>Mobile No:{{empObj.mobileno}}</h6>
+                    <h6>Email ID:{{empObj.emailid}}</h6>
+                    <h6>City:{{empObj.city}}</h6>
+                  
+                    <h6>State:{{empObj.state}}</h6>
+                    <h6>Password:{{empObj.password}}</h6>
+                    <h6>CName:{{empObj.country.cname}}</h6>
+
+                </div>
+                <div class="card-footer bg-secondary">
+                    <button routerLink="" class="btn btn-warning">Home</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

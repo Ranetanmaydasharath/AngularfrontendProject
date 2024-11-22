@@ -1,0 +1,45 @@
+<app-header></app-header>
+
+<!-- <app-login></app-login> -->
+ 
+<br>
+<div class="container-fluid">
+    <div>
+        <button routerLink="/addemp" class="btn btn-success">AddEmployee</button>
+        <button class="btn btn-warning" (click)="onUpdate()">Update Employee</button>
+        <button class="btn btn-danger" (click)="onDelete()">Delete Employe</button>
+       
+
+
+    </div>
+    <br>
+<table class="table table-bordered">
+    <thead class="table-dark">
+        <tr>
+            <th>Sr No.</th>
+            <th>Action</th>
+            <th>Select</th>
+            <th>EmailID</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>City</th>
+            <th>State</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of empData;index as i">
+            <td> {{i+1}} </td>
+            <td><input type="radio" (click)="onEdit(item.id)" name="record"></td>
+            <td> <a [routerLink]="['/details',item.id]">{{item.name}} </a></td>
+            <td> {{item.emailid}} </td>
+            <td> {{item.password}} </td>
+            
+            <td> {{item.country.cname}} </td>
+            <td> {{item.country.city}} </td>
+            <td> {{item.country.state}} </td>
+            
+
+        </tr>
+    </tbody>
+</table>
+</div>
